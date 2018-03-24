@@ -1,0 +1,143 @@
+/* 
+0-600px phone
+600-900px tablet portrait
+900-1200px tablet landscape
+[1200 - 1800] is where normal styles apply
+1800px + big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+
+body {
+  font-family: "Tillana", sans-serif;
+  line-height: 1.5;
+  font-weight: 600; }
+
+.Header__name {
+  font-family: "Miltonian", sans-serif; }
+
+.heading--title {
+  font-size: 3rem; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.header {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  position: relative;
+  background-color: #0061ff;
+  color: white;
+  height: 15rem; }
+  .header__pic {
+    float: left; }
+    .header__pic img {
+      height: 15rem; }
+  .header__name {
+    font-size: 5rem;
+    margin-left: 20rem; }
+
+.about {
+  background-color: #eee;
+  font-size: 1.6rem; }
+  .about__info {
+    margin-bottom: 2rem;
+    background-color: #b9def7;
+    padding: 3rem; }
+  .about__contact {
+    padding: 3rem; }
+
+.Writing {
+  background-color: #7b94d8;
+  font-size: 1.6rem;
+  padding: 3rem; }
+  .Writing__fiction, .Writing__poetry {
+    margin-bottom: 2rem; }
+    .Writing__fiction iframe, .Writing__poetry iframe {
+      width: 45vw;
+      height: 60rem; }
+      @media (max-width: 56.25em) {
+        .Writing__fiction iframe, .Writing__poetry iframe {
+          width: 55rem; } }
+
+.row {
+  max-width: 192rem;
+  margin: 0 auto; }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
+  .row:not(:last-child) {
+    margin-bottom: 4rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 2rem; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 2rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem)/2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem)/3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem)/3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem)/4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem)/4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem)/4) + 2 * 6rem); }
