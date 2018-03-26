@@ -88,6 +88,16 @@ body {
     padding: 3rem; }
   .about__contact {
     padding: 3rem; }
+  .about__fictionpress {
+    padding: 3rem;
+    background-color: #96b6cc; }
+  .about a:link, .about a:visited {
+    text-decoration: none;
+    color: blue;
+    border-bottom: 0.2rem solid transparent;
+    transition: all 0.2s; }
+  .about a:hover, .about a:active {
+    border-bottom: 0.2rem solid blue; }
 
 .Writing {
   background-color: #7b94d8;
